@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.abhijit.paypay.R
 import com.abhijit.paypay.databinding.ActivityMainBinding
-import com.abhijit.paypay.ui.doctors.DotcorsViewModel
+import com.abhijit.paypay.ui.currency.DotcorsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 

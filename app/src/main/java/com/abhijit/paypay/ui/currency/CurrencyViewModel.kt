@@ -1,4 +1,4 @@
-package com.abhijit.paypay.ui.doctors
+package com.abhijit.paypay.ui.currency
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter

@@ -6,7 +6,7 @@
     app:startDestination="@+id/navigation_doctor">
     <fragment
         android:id="@+id/navigation_doctor"
-        android:name="com.abhijit.paypay.ui.doctors.CurrencyFragment"
+        android:name="com.abhijit.paypay.ui.currency.CurrencyFragment"
         tools:layout="@layout/fragment_currency_list" />
     <!--    <fragment-->
     <!--        android:id="@+id/navigation_maps"-->
