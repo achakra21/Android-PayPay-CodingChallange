@@ -21,21 +21,21 @@ import kotlinx.coroutines.launch
 @BindingAdapter("profileImage")
 fun loadImage(view: ImageView, imageUrl: String?) {
     Glide.with(view.getContext())
-            .load(imageUrl).apply(RequestOptions().error(R.drawable.ic_baseline_person_24).circleCrop())
-            .into(view)
+        .load(imageUrl).apply(RequestOptions().error(R.drawable.ic_baseline_person_24).circleCrop())
+        .into(view)
 }
 
 //method for binding image in xml using glide
 @BindingAdapter("passportImage")
 fun loadPassportImage(view: ImageView, imageUrl: String?) {
     Glide.with(view.getContext())
-            .load(imageUrl).apply(RequestOptions().error(R.drawable.ic_baseline_person_24))
-            .into(view)
+        .load(imageUrl).apply(RequestOptions().error(R.drawable.ic_baseline_person_24))
+        .into(view)
 }
 
 class DotcorsViewModel @ViewModelInject constructor(
-        private val freeNowRepository: FreeNowRepository,
-        private val networkHelper: NetworkHelper
+    private val freeNowRepository: FreeNowRepository,
+    private val networkHelper: NetworkHelper
 ) : ViewModel() {
 
 
@@ -43,16 +43,12 @@ class DotcorsViewModel @ViewModelInject constructor(
     val currency: LiveData<Resource<Currencies>>
         get() = _currency
 
-
-    init {
-        //fetchDoctors()
-    }
-
     public fun fetchCurrency() {
         viewModelScope.launch {
             _currency.postValue(Resource.loading(null))
             if (networkHelper.isNetworkConnected()) {
-                freeNowRepository.getCurrencyies(BuildConfig.APIKEY
+                freeNowRepository.getCurrencyies(
+                    BuildConfig.APIKEY
 
                 ).let {
                     if (it.isSuccessful) {
@@ -68,8 +64,6 @@ class DotcorsViewModel @ViewModelInject constructor(
 
         }
     }
-
-
 
 
 }
