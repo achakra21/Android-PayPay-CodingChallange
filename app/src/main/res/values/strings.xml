@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PayPay株式会社-CodingTest</string>
+    <string name="name">Name : %s</string>
+    <string name="address">Address : %s</string>
+    <string name="search_hint">enter amount</string>
+    <string name="app_label">PayPay</string>
+    <string name="select_currency">select currency</string>
+    app_label
+
+</resources>
